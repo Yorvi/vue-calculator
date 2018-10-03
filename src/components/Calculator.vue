@@ -68,6 +68,10 @@ div.calculator {
   border-radius: 10px;
   color: #33475F;
 }
+.btn:hover {
+  background-color: #49D191;
+  cursor: pointer;
+}
 .operator {
   background-color: #00C180;
 }
