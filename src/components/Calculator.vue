@@ -1,6 +1,8 @@
 <template>
   <div class="calculator">
-    <div class="display">0</div>
+    <div class="display">
+      {{current || '0'}}
+    </div>
     <div class="btn">C</div>
     <div class="btn">+/-</div>
     <div class="btn">%</div>
@@ -25,7 +27,11 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      current: '',
+    }
+  }
 }
 </script>
 
@@ -38,7 +44,7 @@ div.calculator {
   font-size: 40px;
   width: 400px;
   margin: 0 auto;
-  background-color: #545760;
+  background-color: #EEF0F3;
   border: 1px solid black;
   border-radius: 2px;
 }
@@ -56,10 +62,11 @@ div.calculator {
   grid-column: 1/3;
 }
 .btn {
-  background-color: #EEF0F3;
+  background-color: #FEFFFE;
   margin: 5px;
   border: 1px solid #33475F;
   border-radius: 10px;
+  color: #33475F;
 }
 .operator {
   background-color: #00C180;
