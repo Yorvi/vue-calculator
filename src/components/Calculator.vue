@@ -2,7 +2,9 @@
 
   
   <div>
-    <h1>Welcome to my Vue Calculator</h1>
+    <h1>Welcome to my Vue.js Calculator</h1>
+    <small>( Please click the "C" button to refresh when done with a calculation. )</small>
+    <br><br>
     <div class="calculator">
       <div class="display">
         {{current || '0'}}
@@ -99,7 +101,13 @@ export default {
 </script>
 
 <style scoped>
-div.calculator {
+body {
+  background-color: #F5F5F5;
+}
+h1 {
+  margin: 0;
+}
+.calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
@@ -134,11 +142,15 @@ div.calculator {
   box-shadow: 1px 1px 2px #555553;
 }
 .btn:hover {
-  background-color: #49D191;
+  background-color: #F5F5F5;
   cursor: pointer;
 }
 .operator {
   background-color: #00C180;
   box-shadow: 1px 1px 2px #5cf776;
+}
+.operator:hover {
+  background-color: #49D191;
+  cursor: pointer;
 }
 </style>
